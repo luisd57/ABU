@@ -42,7 +42,7 @@ class CreateSuperAdminCommand extends Command
         $name         = $helper->ask($input, $output, $nameQuestion);
 
         // Create user with all roles
-        $user = User::create(
+        $user = new User(
             $email,
             [RoleEnum::ADMIN, RoleEnum::THERAPIST, RoleEnum::USER],
             $this->passwordHasher->hashPassword(new User($email, [], '', $name), $password),

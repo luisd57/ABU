@@ -17,7 +17,7 @@ class UserService
     public function createUser(string $email, string $plainPassword, string $name, array $roles): User
     {
         $roleEnums      = array_map(fn(string $role) => RoleEnum::fromString($role), $roles);
-        $user           = User::create($email, $roleEnums, '', $name);
+        $user           = new User($email, $roleEnums, '', $name);
         $hashedPassword = $this->passwordHasher->hashPassword($user, $plainPassword);
         $user           = $user->withPassword($hashedPassword);
 
