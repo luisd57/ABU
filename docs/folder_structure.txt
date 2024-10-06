@@ -1,0 +1,46 @@
+Structure du dossier pour le volume Windows-SSD
+Le num‚ro de s‚rie du volume est 00000060 BCC3:021E
+C:\USERS\LUISR\DOCUMENTS\WS\ABU\API\SRC
+³   Kernel.php
+³   
+ÃÄÄÄApplication
+³   ÃÄÄÄDTO
+³   ³       CreateAppointmentDTO.php
+³   ³       
+³   ÀÄÄÄService
+³           AppointmentService.php
+³           UserService.php
+³           
+ÃÄÄÄDomain
+³   ÃÄÄÄEntity
+³   ³       Appointment.php
+³   ³       User.php
+³   ³       
+³   ÃÄÄÄEnum
+³   ³       AppointmentTypeEnum.php
+³   ³       RoleEnum.php
+³   ³       
+³   ÀÄÄÄRepository
+³           AppointmentRepositoryInterface.php
+³           UserRepositoryInterface.php
+³           
+ÀÄÄÄInfrastructure
+    ÃÄÄÄAPI
+    ³   ÃÄÄÄController
+    ³   ³       CreateAppointmentController.php
+    ³   ³       SecurityController.php
+    ³   ³       
+    ³   ÀÄÄÄResponse
+    ³           AppointmentResponse.php
+    ³           
+    ÃÄÄÄCommand
+    ³       CreateSuperAdminCommand.php
+    ³       
+    ÃÄÄÄPersistence
+    ³   ÀÄÄÄRepository
+    ³           DoctrineAppointmentRepository.php
+    ³           DoctrineUserRepository.php
+    ³           
+    ÀÄÄÄSecurity
+            AppAuthenticator.php
+            
