@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Infrastructure\API\Response;
+namespace App\Presentation\API\Response;
 
 use App\Domain\Entity\Appointment;
 

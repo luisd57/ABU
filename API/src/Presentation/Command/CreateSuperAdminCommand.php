@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Infrastructure\Command;
+namespace App\Presentation\Command;
 
 use App\Domain\Entity\User;
 use App\Domain\Enum\RoleEnum;

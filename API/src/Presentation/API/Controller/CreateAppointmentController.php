@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Infrastructure\API\Controller;
+namespace App\Presentation\API\Controller;
 
-use App\Application\Command\CreateAppointmentCommand;
 use App\Application\DTO\CreateAppointmentDTO;
 use App\Application\Service\AppointmentService;
 use App\Domain\Enum\AppointmentTypeEnum;
-use App\Infrastructure\API\Response\AppointmentResponse;
+use App\Presentation\API\Response\AppointmentResponse;
 use InvalidArgumentException;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
