@@ -10,12 +10,10 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 class SecurityController extends AbstractController
 {
     #[Route('/api/login', name: 'app_login', methods: ['POST'])]
-    public function login(AuthenticationUtils $authenticationUtils): Response
+    public function login(): Response
     {
-        // Authentication is handled by the AppAuthenticator
-        // This method will not be called on successful authentication
-        $error = $authenticationUtils->getLastAuthenticationError();
-        return $this->json(['error' => $error?->getMessage()], Response::HTTP_UNAUTHORIZED);
+        // This should not be called, authentication is handled by AppAuthenticator
+        throw new \LogicException('This method should not be reached!');
     }
 
     #[Route('/api/logout', name: 'app_logout', methods: ['POST'])]
