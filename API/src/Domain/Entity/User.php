@@ -41,11 +41,6 @@ class User implements PasswordAuthenticatedUserInterface, UserInterface
         return $this->id;
     }
 
-    public function getEmail(): string
-    {
-        return $this->email;
-    }
-
     public function getRoles(): array
     {
         $roles   = array_map(fn(string $role) => RoleEnum::fromString($role), $this->roles);
